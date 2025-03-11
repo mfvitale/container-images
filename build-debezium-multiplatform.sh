@@ -132,24 +132,10 @@ DEFAULT_PLATFORM=$2
 
 DEBEZIUM_VERSION="$1"
 
-build_docker_image base base latest
-build_docker_image zookeeper
-build_docker_image kafka
-build_docker_image connect-base
-build_docker_image connect
-build_docker_image server
-build_docker_image operator
-if [[ "$SKIP_UI" != "true" ]]; then
-    build_docker_image platform-conductor
-    build_docker_image platform-stage
-fi
-build_docker_image example-mysql examples/mysql
-build_docker_image example-mysql-gtids examples/mysql-gtids
-build_docker_image example-mysql-master examples/mysql-replication/master
-build_docker_image example-mysql-replica examples/mysql-replication/replica
-build_docker_image example-mariadb examples/mariadb
-build_docker_image example-postgres examples/postgres
-build_docker_image example-mongodb examples/mongodb
+
+
+build_docker_image platform-stage
+
 
 echo ""
 echo "**********************************"
