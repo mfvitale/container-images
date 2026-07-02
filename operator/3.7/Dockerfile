@@ -88,7 +88,7 @@ ENV DEBEZIUM_VERSION=3.6.0.Final \
     OPERATOR_HOME=/operator \
     MAVEN_REPO_CENTRAL="https://repo1.maven.org/maven2"
 ENV OPERATOR_URL_PATH=io/debezium/debezium-operator-dist/$DEBEZIUM_VERSION/debezium-operator-dist-$DEBEZIUM_VERSION.tar.gz \
-    OPERATOR_MD5=45dec347a3a2fc13263c930f37399e87
+    OPERATOR_MD5=178a46e6a1adc2edd8182fd8afc59e90
 
 USER root
 #
