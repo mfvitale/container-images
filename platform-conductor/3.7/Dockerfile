@@ -83,11 +83,11 @@
 #
 FROM registry.access.redhat.com/ubi8/ubi-minimal AS builder
 
-ENV DEBEZIUM_VERSION=3.6.0.Final \
+ENV DEBEZIUM_VERSION=3.7.0.Alpha1 \
     DEBEZIUM_PLATFORM_CONDUCTOR_HOME=/debezium-platform-conductor \
     MAVEN_REPO_CENTRAL="https://repo1.maven.org/maven2"
 ENV PLATFORM_CONDUCTOR_URL_PATH=io/debezium/debezium-platform-conductor/$DEBEZIUM_VERSION/debezium-platform-conductor-$DEBEZIUM_VERSION.tar.gz \
-    PLATFORM_CONDUCTOR_MD5=33ae48f997efb3d241ac27e65281f857
+    PLATFORM_CONDUCTOR_MD5=cd5344576d359bcb9937cd0c37b45202
 
 RUN microdnf install -y curl gzip tar && \
     mkdir -p $DEBEZIUM_PLATFORM_CONDUCTOR_HOME && \
